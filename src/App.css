@@ -1,0 +1,15 @@
+.app_container {
+  width: 100%;
+	margin: 0 auto;
+	height: 100vh;
+	padding: 20px;
+  
+	display: flex;
+	flex-direction: column;
+}
+
+@media (min-width: 769px) {
+  .app_container {
+    max-width: 840px;
+  }
+}

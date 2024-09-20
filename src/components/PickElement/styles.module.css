@@ -1,0 +1,142 @@
+.pick_element {
+	--element-height: 60px;
+	--element-width: 60px;
+
+	display: grid;
+	border-radius: 50%;
+	place-content: center;
+	box-sizing: content-box;
+	width: var(--element-width);
+	height: var(--element-height);
+	background-clip: padding-box;
+	border: 20px solid transparent;
+	background-color: var(--white);
+	box-shadow: inset 0px 8px 0px -2px hsl(0, 0%, 80%);
+
+	img {
+		width: calc(var(--element-width) - 20px);
+		height: calc(var(--element-height) - 20px);
+	}
+}
+
+.element_container {
+	border-radius: 50%;
+	position: absolute;
+	cursor: pointer;
+	top: 50%;
+	right: 50%;
+	translate: 50% -50%;
+	transition: translate 1s ease;
+}
+
+.rock_element {
+	animation: rock_animation 1s forwards;
+	background: linear-gradient(var(--red-gradient));
+	box-shadow: inset 0px -8px 0px -2px hsl(349, 61%, 42%);
+}
+
+@keyframes rock_animation {
+	100% {
+		translate: 50% 60%;
+	}
+}
+
+.hard_mode_rock_element {
+	animation: rock_animation_hard 1s forwards;
+	background: linear-gradient(var(--red-gradient));
+}
+
+@keyframes rock_animation_hard {
+	100% {
+		translate: 120% 60%;
+	}
+}
+
+.paper_element {
+	animation: paper_animation 1s forwards;
+	background: linear-gradient(var(--blue-gradient));
+	box-shadow: inset 0px -8px 0px -2px hsl(230, 59%, 42%);
+}
+
+@keyframes paper_animation {
+	100% {
+		translate: 160% -160%;
+	}
+}
+
+.hard_mode_paper_element {
+	animation: paper_animation_hard 1s forwards;
+	background: linear-gradient(var(--blue-gradient));
+}
+
+@keyframes paper_animation_hard {
+	100% {
+		translate: 160% -80%;
+	}
+}
+
+.scissors_element {
+	animation: scissors_animation 1s forwards;
+	background: linear-gradient(var(--yellow-gradient));
+	box-shadow: inset 0px -8px 0px -2px hsl(39, 100%, 39%);
+}
+
+@keyframes scissors_animation {
+	100% {
+		translate: -60% -160%;
+	}
+}
+
+.hard_mode_scissors_element {
+	animation: scissors_animation_hard 1s forwards;
+	background: linear-gradient(var(--yellow-gradient));
+}
+
+@keyframes scissors_animation_hard {
+	100% {
+		translate: 40% -180%;
+	}
+}
+
+.lizard_element {
+	animation: lizard_animation 1s forwards;
+	background: linear-gradient(var(--purple-gradient));
+	box-shadow: inset 0px -8px 0px -2px hsl(261, 52%, 46%);
+}
+
+@keyframes lizard_animation {
+	100% {
+		translate: -40% 60%;
+	}
+}
+
+.spock_element {
+	animation: spock_animation 1s forwards;
+	background: linear-gradient(var(--cyan-gradient));
+	box-shadow: inset 0px -8px 0px -2px hsl(189, 49%, 40%);
+}
+
+@keyframes spock_animation {
+	100% {
+		translate: -60% -80%;
+	}
+}
+
+@media (min-width: 500px) {
+	.pick_element {
+		--element-height: 80px;
+		--element-width: 80px;
+	}
+}
+
+@media (min-width: 650px) {
+	.pick_element {
+		--element-height: 100px;
+		--element-width: 100px;
+
+		img {
+			width: calc(var(--element-width) - 40px);
+			height: calc(var(--element-height) - 40px);
+		}
+	}
+}

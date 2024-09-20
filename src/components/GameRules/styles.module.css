@@ -1,0 +1,64 @@
+.modal_container {
+	inset: 0;
+	z-index: 10;
+	display: grid;
+	position: fixed;
+	place-content: center;
+	background-color: rgba(0, 0, 0, 0.5);
+}
+
+.rules_modal {
+	padding: 20px;
+	border-radius: 8px;
+	background-color: var(--white);
+
+	display: grid;
+  row-gap: 20px;
+	grid-template-areas: 'title . button' 'content . .';
+}
+
+.rules_modal h4 {
+	font-size: 22px;
+	color: var(--dark-text);
+	grid-area: title;
+}
+
+.rules_modal button {
+	grid-area: button;
+	cursor: pointer;
+}
+
+.rules_modal button:hover {
+	img {
+		filter: contrast(10);
+	}
+}
+
+.modal_content {
+	grid-area: content;
+}
+
+@media (max-width: 425px) {
+	.rules_modal {
+		width: 100vw;
+		height: 100vh;
+		place-content: center;
+		border-radius: unset;
+		justify-items: center;
+		align-content: space-evenly;
+		grid-template-areas: 'title' 'content' 'button';
+
+		h4 {
+			font-size: 32px;
+			font-weight: 700;
+		}
+
+		button {
+			scale: 1.5;
+		}
+	}
+
+	.modal_content img {
+		width: 100%;
+	}
+}

@@ -1,0 +1,18 @@
+.button {
+  width: 160px;
+  margin-top: 6px;
+  cursor: pointer;
+  padding: 6px 0;
+  color: var(--white);
+  border-radius: 6px;
+  align-self: center;
+  font-size: 18px;
+  border: 1px solid var(--white);
+}
+
+@media (min-width: 650px) {
+  .button {
+    font-size: 16px;
+    align-self: flex-end;
+  }
+}
