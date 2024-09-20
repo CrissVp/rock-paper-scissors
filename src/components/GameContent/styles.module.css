@@ -1,38 +1,38 @@
 .game_container {
-  flex: 1;
+	flex: 1;
 }
 
 .original_mode_container {
-  height: 100%;
-  display: grid;
-  position: relative;
-  place-content: center;
-  background: url('bg-triangle.svg') no-repeat center;
-  background-size: 220px auto;
+	height: 100%;
+	display: grid;
+	position: relative;
+	place-content: center;
+	background: url('/rock-paper-scissors/bg-triangle.svg') no-repeat center;
+	background-size: 220px auto;
 }
 
 .hard_mode_container {
-  background: url('bg-pentagon.svg') no-repeat center;
-  background-size: cover;
-  background-size: 250px auto;
+	background: url('/rock-paper-scissors/bg-pentagon.svg') no-repeat center;
+	background-size: cover;
+	background-size: 250px auto;
 }
 
 @media (min-width: 500px) {
-  .original_mode_container {
-    background-size: 320px auto;
-  }
+	.original_mode_container {
+		background-size: 320px auto;
+	}
 
-  .hard_mode_container {
-    background-size: 350px auto;
-  }
+	.hard_mode_container {
+		background-size: 350px auto;
+	}
 }
 
 @media (min-width: 650px) {
-  .original_mode_container {
-    background-size: 300px auto;
-  }
+	.original_mode_container {
+		background-size: 300px auto;
+	}
 
-  .hard_mode_container {
-    background-size: 400px auto;
-  }
+	.hard_mode_container {
+		background-size: 400px auto;
+	}
 }
